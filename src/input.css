@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        min-height: 100vh;
+        /* background: linear-gradient(172.7deg, #FFD370 5.12%, #FFD370 53.33%, #FFD370 53.44%, #FFFFFF 53.45%, #FFFFFF 94.32%); */
+    }
+    input{
+        outline:0px;
+    }
+}
+
+@layer utilities{
+    .del{
+        @apply text-[#9F9A91] line-through
+    }
+    .tab--active{
+        @apply text-black border-[#333333]
+    }
+}

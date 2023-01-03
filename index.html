@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-primary">
+    <main class="container flex md:items-center h-[100vh]">
+        <!-- row -->
+        <section class="w-full md:grid grid-cols-12 md:gap-6"> 
+            <!-- col -->
+            <div class="flex mt-12 md:mt-0 flex-col items-center md:justify-center md:col-span-5 md:col-start-2">
+                <h1><img src="./dist/image/logo.svg" alt="" class="w-[312px] mb-5"></h1>
+                <!-- toggle 註冊帳號 -->
+                <h2 id="registerToggle" class="text-2xl font-bold md:hidden mb-8 text-border">最實用的線上待辦事項服務</h2>
+                <img src="./dist/image/brief.png" alt="" class="hidden md:block ">
+            </div>
+            <!-- col -->
+            <div class="col-span1 hidden md:block"></div>
+            <!-- col -->
+            <div class="md:col-span-4 flex flex-col justify-center">
+                <h2 id="registerTogglePC" class="text-2xl font-bold mb-6 text-border hidden md:block">最實用的線上待辦事項服務</h2>
+                <!-- 表單 toggle 註冊帳號 -->
+                <form class="">
+                    <label for="email" class="mb-4 block">
+                        <p class="mb-1 font-bold md:text-base text-sm text-border">Email</p>
+                        <input id="email" name="email" type="email" placeholder="請輸入Email" class="peer w-full px-4 py-3 rounded-[10px] mb-1">
+                        <p class="invisible peer-invalid:visible text-[#D87355] text-sm">請提供一個有效的電子郵件地址。</p>
+                    </label>
+                    <label for="password" class="mb-6 block">
+                        <p class="mb-1 font-bold md:text-base text-sm text-border">密碼</p>
+                        <input id="password" name="password" required type="password" placeholder="請輸入密碼" class="w-full px-4 py-3 rounded-[10px]">
+                    </label>
+                    <input id="submit" type="submit" value="登入" class="px-12 py-3 mb-6 block mx-auto hover:bg-red-600 font-bold text-white bg-border rounded-[10px] cursor-pointer">
+                    <a id="chageToRegister" name="chageToRegister" class="cursor-pointer hover:text-red-600 font-bold text-border text-center block">註冊帳號</a>
+                </form>
+                <form class="hidden">
+                    <label for="email" class="mb-4 block">
+                          <span class="mb-1 font-bold md:text-base text-sm text-border">Email</span>
+                          <span class="hidden text-[#D87355] text-sm">&nbsp*請提供一個有效的電子郵件</span>
+                        <input id="email_2" type="text" placeholder="請輸入Email" class="w-full px-4 py-3 rounded-[10px]">
+                    </label>
+                    <label for="nickName" class="mb-4 block">
+                          <span class="mb-1 font-bold md:text-base text-sm text-border">您的暱稱</span>
+                          <span class="hidden text-[#D87355] text-sm">&nbsp*暱稱需包含一個字</span>
+                        <input id="nickName" type="text" placeholder="請輸入暱稱" class="w-full px-4 py-3 rounded-[10px]">
+                    </label>
+                    <label for="password" class="mb-4 block">
+                          <span class="mb-1 font-bold md:text-base text-sm text-border">密碼</span>
+                          <span class="hidden text-[#D87355] text-sm">&nbsp*密碼不得少於6個字元</span>
+                        <input id="password_2" type="password" placeholder="請輸入密碼" class="w-full px-4 py-3 rounded-[10px]">
+                    </label>
+                    <label for="passwordTwice" class="mb-4 md:mb-6 block">
+                          <span class="inline-block mb-1 font-bold md:text-base text-sm text-border">再次輸入密碼</span>
+                          <span class="hidden text-[#D87355] text-sm">&nbsp*密碼輸入不一致</span>
+                        <input id="passwordTwice" type="password" placeholder="請再次輸入密碼" class="w-full px-4 py-3 rounded-[10px]">
+                    </label>
+                    <input id="registerSubmit" type="submit" value="註冊帳號" class="cursor-pointer px-12 py-3 mb-6 block mx-auto hover:bg-red-600 font-bold text-white bg-border rounded-[10px]">
+                    <a id="chageToSignIn" class="cursor-pointer hover:text-red-600 font-bold text-border text-center block">登入</a>
+                </form>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="all.js"></script>
+</body>
+</html>

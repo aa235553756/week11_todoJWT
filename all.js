@@ -121,7 +121,7 @@ const statusAlert = async (res, status) => {
       allowOutsideClick: false,
     });
     await new Promise((reslove) => setTimeout(reslove, 2000));
-    window.location = '#/todo.html';
+    window.location = '/todo.html';
   } else {
     Swal.fire({
       title: res.data.message,

@@ -65,7 +65,7 @@ const checkAuthorization = async () => {
   const resData = await permissCheck(authorization);
   if (resData.response.status === 401) {
     alert('授權過期，自動跳轉自登入頁面');
-    window.location.replace('/index.html');
+    window.location.replace('./index.html');
   }
 };
 
@@ -490,7 +490,7 @@ logOut.addEventListener('click', async () => {
       localStorage.removeItem('Authorization');
       localStorage.removeItem('nickName');
       Swal.close();
-      window.location.replace('#/index.html');
+      window.location.replace('./index.html');
     }
   } catch (err) {
     Swal.fire(

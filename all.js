@@ -121,7 +121,7 @@ const statusAlert = async (res, status) => {
       allowOutsideClick: false,
     });
     await new Promise((reslove) => setTimeout(reslove, 2000));
-    window.location = 'todo.html';
+    window.location = '#/todo.html';
   } else {
     Swal.fire({
       title: res.data.message,
@@ -189,6 +189,7 @@ signInForm.submit.addEventListener('click', async () => {
     statusAlert(res, 200);
   } catch (err) {
     console.error(err);
+    alert('網路連線異常')
     Swal.fire({
       title: '網路連線異常',
       icon: 'error',
@@ -245,6 +246,7 @@ register.registerSubmit.addEventListener('click', async () => {
     }
   } catch (err) {
     console.error(err);
+    alert('網路連線異常')
     Swal.fire({
       title: '網路連線異常',
       icon: 'error',

@@ -490,7 +490,7 @@ logOut.addEventListener('click', async () => {
       localStorage.removeItem('Authorization');
       localStorage.removeItem('nickName');
       Swal.close();
-      window.location.replace('./index.html');
+      window.location.replace('#/index.html');
     }
   } catch (err) {
     Swal.fire(

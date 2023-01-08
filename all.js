@@ -37,7 +37,7 @@ const init = async () => {
     if (data.response.status === 200) {
       alert('登入成功,請稍等');
       setTimeout(() => {
-        window.location.replace('/todo.html');
+        window.location.replace('./todo.html');
       }, 1000);
     }
   }
@@ -121,7 +121,7 @@ const statusAlert = async (res, status) => {
       allowOutsideClick: false,
     });
     await new Promise((reslove) => setTimeout(reslove, 2000));
-    window.location = '/todo.html';
+    window.location = './todo.html';
   } else {
     Swal.fire({
       title: res.data.message,
